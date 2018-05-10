@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script src="timesync.js"></script>
   </head>
   <body>
     <h1> This page is currently empty </h1>
@@ -16,9 +17,9 @@
   });
 
   // get notified on changes in the offset
-  ts.on('change', function (offset) {
-    console.log('changed offset: ' + offset + ' ms<br>');
-  });
+  // ts.on('change', function (offset) {
+  //   console.log('changed offset: ' + offset + ' ms<br>');
+  // });
 
   // get synchronized time
   setInterval(function () {
