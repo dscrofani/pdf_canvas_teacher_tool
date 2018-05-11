@@ -9,23 +9,25 @@
     <button id = "button"> Click for secret info </button>
 
     <script src = "myScript.js"></script>
+    
     <script>
   // create a timesync instance
-  var ts = timesync.create({
-    server: '/timesync',
-    interval: 10000
-  });
+      var ts = timesync.create({
+        server: '/timesync',
+        interval: 10000
+      });
 
-  // get notified on changes in the offset
-  // ts.on('change', function (offset) {
-  //   console.log('changed offset: ' + offset + ' ms<br>');
-  // });
+      // get notified on changes in the offset *** Do we need this
+      // ts.on('change', function (offset) {
+      //   console.log('changed offset: ' + offset + ' ms<br>');
+      // });
 
-  // get synchronized time
-  setInterval(function () {
-    var now = new Date(ts.now());
-    document.write('now: ' + now.toISOString() + ' ms<br>');
-  }, 1000);
-</script>
+      // get synchronized time
+      setInterval(function () {
+        var now = new Date(ts.now());
+        console.log('now: ' + now.toISOString() + ' ms<br>');
+      }, 1000);
+    </script>
+
   </body>
 </html>
